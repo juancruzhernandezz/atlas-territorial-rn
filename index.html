@@ -1,9 +1,9 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Juan Cruz Hernández"><meta name="robots" content="noindex, nofollow"><style>body{margin:0}</style></head><body><title>Atlas Territorial Río Negro</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="only light"><meta name="author" content="Juan Cruz Hernández"><meta name="robots" content="noindex, nofollow"><style>body{margin:0}</style></head><body><title>Atlas Territorial Río Negro</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
 <style>
-/* Layout: documento de trabajo en una columna, con franja de identidad arriba; el mapa ocupa el ancho con panel lateral. Paleta: verde y azul de la identidad del Gobierno de Río Negro */
+/* Tema claro fijo (igual al PDF). Layout: documento de trabajo en una columna, con franja de identidad arriba; el mapa ocupa el ancho con panel lateral. Paleta: verde y azul de la identidad del Gobierno de Río Negro */
 :root{
   --paper:#FFFFFF; --surface:#F4F6F7; --ink:#111111; --muted:#5A5F66; --rule:#DDE1E4;
   --acc:#1F8F1D; --acc-soft:#EAF8E9; --brand:#39C937; --blue:#007BE0; --blue-ink:#0067BD; --blue-soft:#E9F3FC; --bar:#111111; --on-bar:#FFFFFF;
@@ -15,23 +15,10 @@
   --display:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:only light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#0F1214; --surface:#181C1F; --ink:#ECEFF1; --muted:#9AA3AB; --rule:#2C3236;
-  --acc:#5BD959; --acc-soft:#16301A; --brand:#39C937; --blue:#4DA8F5; --blue-ink:#0067BD; --blue-soft:#10263A; --bar:#000000; --on-bar:#FFFFFF;
-  --land:#1A1F22; --land-line:#3E464C; --other:#121618; --sea:#0E1A24; --water:#1F4A6B; --river:#4A97DA;
-  --pop:#ECEFF1; --health:#F0675C; --uni:#5AAEF5; --road:#C2A27A; --rail:#C9D1D7; --energy:#F59E3D; --gas:#4CC9D6; --oil:#5B5141;
-  --c0:#1A1F22; --c1:#173A1C; --c2:#1F6A22; --c3:#2FA82D; --c4:#6EE06B; --cneg:#5E3A2A;
-  --warn:#F0A44B; --warn-soft:#3A2A14; --iso:#4E4213; --iso-line:#E3C25A; --edu:#6FB6F2;
-  --t1:#5BD959; --t2:#2F7A31; --t3:#6A5A2A; --t4:#A8692C; --t5:#D0663E; color-scheme:dark }}
-:root[data-theme="dark"]{
-  --paper:#0F1214; --surface:#181C1F; --ink:#ECEFF1; --muted:#9AA3AB; --rule:#2C3236;
-  --acc:#5BD959; --acc-soft:#16301A; --brand:#39C937; --blue:#4DA8F5; --blue-ink:#0067BD; --blue-soft:#10263A; --bar:#000000; --on-bar:#FFFFFF;
-  --land:#1A1F22; --land-line:#3E464C; --other:#121618; --sea:#0E1A24; --water:#1F4A6B; --river:#4A97DA;
-  --pop:#ECEFF1; --health:#F0675C; --uni:#5AAEF5; --road:#C2A27A; --rail:#C9D1D7; --energy:#F59E3D; --gas:#4CC9D6; --oil:#5B5141;
-  --c0:#1A1F22; --c1:#173A1C; --c2:#1F6A22; --c3:#2FA82D; --c4:#6EE06B; --cneg:#5E3A2A;
-  --warn:#F0A44B; --warn-soft:#3A2A14; --iso:#4E4213; --iso-line:#E3C25A; --edu:#6FB6F2;
-  --t1:#5BD959; --t2:#2F7A31; --t3:#6A5A2A; --t4:#A8692C; --t5:#D0663E; color-scheme:dark }
+
+
 
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font:15px/1.6 var(--body);
@@ -238,7 +225,7 @@ html.print .band{margin-left:0;margin-right:0}
   .chartwrap svg,figure.pmap>svg{max-width:100%;height:auto}
   .sechead,h2,h3{break-after:avoid}
   .fact,.finding,.case,.idea,.clpart,.step,tr,figure{break-inside:avoid}
-  #mapa,#datos,#ciudad-lineal,#casos,#propuestas{break-before:page}
+  #mapa,#datos,#ciudad-lineal{break-before:page}
   a{color:inherit;text-decoration:none}
   .note{font-size:7.8pt}
   .sources{font-size:7.6pt}
@@ -349,7 +336,7 @@ html.print .band{margin-left:0;margin-right:0}
 
 <section id="ciudad-lineal">
   <div class="sechead"><div class="eyebrow">Alto Valle · El territorio de la media hora</div><h2><span class="hl">Ciudad Lineal</span>: el valle como una sola ciudad</h2>
-    <p class="muted prose">En las ciudades y pueblos del corredor, de Campo Grande a Chichinales, viven 344.517 rionegrinos, sobre unos 100 km de Ruta 22 y de vía del tren. El resto de los 358.725 habitantes de los 13 municipios vive en zonas rurales. Para zonas de baja densidad como esta, Carlos Moreno no propone la ciudad de los 15 minutos sino el <b>territorio de la media hora</b>: un territorio funciona bien si la mayoría de la gente llega en 30 minutos a lo que necesita, como el hospital, el estudio y el trabajo. Esta sección mide cuánto se tarda hoy en auto, con el estado actual de la Ruta 22.<span class="screen-only"> <a href="#mapa" class="ver-av">Ver en el mapa el área a 30 minutos de un hospital cabecera</a>.</span></p></div>
+    <p class="muted prose">En las ciudades y pueblos del corredor, de Campo Grande a Chichinales, viven 344.517 rionegrinos, sobre unos 100 km de Ruta 22 y de vía del tren. La cifra es menor que los 358.725 habitantes de los 13 municipios porque acá se cuentan solo las ciudades y los pueblos, sin la población dispersa en chacras y zonas rurales de esos mismos municipios. Para zonas de baja densidad como esta, Carlos Moreno no propone la ciudad de los 15 minutos sino el <b>territorio de la media hora</b>: un territorio funciona bien si la mayoría de la gente llega en 30 minutos a lo que necesita, como el hospital, el estudio y el trabajo. Esta sección mide cuánto se tarda hoy en auto, con el estado actual de la Ruta 22.<span class="screen-only"> <a href="#mapa" class="ver-av">Ver en el mapa el área a 30 minutos de un hospital cabecera</a>.</span></p></div>
   <div class="facts">
     <div class="fact"><b class="num">39 min</b><span>entre Cipolletti y Roca con tráfico habitual, y unos 55 en hora pico. Las dos ciudades más grandes del valle no están a media hora entre sí</span></div>
     <div class="fact"><b class="num">87%</b><span>del corredor está a 30 minutos o menos de un hospital cabecera. Quedan afuera unas 44.000 personas, sobre todo en Villa Regina, Godoy y Chichinales</span></div>
